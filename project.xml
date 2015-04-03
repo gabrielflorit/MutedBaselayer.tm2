@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" background-color="#ffffff">
+
+<Parameters>
+  <Parameter name="attribution"><![CDATA[<a href='https://www.mapbox.com/about/maps/' target='_blank'>&copy; Mapbox &copy; OpenStreetMap</a> <a class='mapbox-improve-map' href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a>]]></Parameter>
+  <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
+  <Parameter name="center">-71.0696,42.3486,15</Parameter>
+  <Parameter name="format">png8:m=h</Parameter>
+  <Parameter name="maxzoom">22</Parameter>
+  <Parameter name="minzoom">0</Parameter>
+  <Parameter name="name"><![CDATA[MutedBaselayer]]></Parameter>
+  <Parameter name="source"><![CDATA[mapbox:///gabriel-florit.19720588,mapbox.mapbox-streets-v5,gabriel-florit.284f070c,gabriel-florit.d5687028,gabriel-florit.c09cf669,gabriel-florit.84745274]]></Parameter>
+</Parameters>
+
+
+<Style name="america_water-fill" filter-mode="first" image-filters="agg-stack-blur(10,10)" comp-op="soft-light">
+  <Rule>
+    <PolygonSymbolizer fill="#ffffff" />
+  </Rule>
+</Style>
+<Style name="america_water-shadow" filter-mode="first">
+  <Rule>
+    <PolygonSymbolizer fill="#ffffff" />
+  </Rule>
+</Style>
+<Style name="america_water" filter-mode="first">
+  <Rule>
+    <PolygonSymbolizer fill="#ffffff" />
+    <LineSymbolizer stroke="#dfdfdf" stroke-width="1" />
+  </Rule>
+</Style>
+<Layer name="america_water"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>america_water</StyleName>
+    <StyleName>america_water-shadow</StyleName>
+    <StyleName>america_water-fill</StyleName>  </Layer>
+
+<Style name="landuse-use" filter-mode="first" comp-op="multiply">
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([class] = 'pitch') and ([type] = 'green')</Filter>
+    <PolygonSymbolizer fill="rgba(204, 204, 204, 0.5)" />
+    <LineSymbolizer stroke-width="2" stroke="rgba(242, 242, 242, 0.5)" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([class] = 'pitch') and ([type] = 'green')</Filter>
+    <PolygonSymbolizer fill="rgba(204, 204, 204, 0.5)" />
+    <LineSymbolizer stroke-width="1.5" stroke="rgba(242, 242, 242, 0.5)" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([class] = 'pitch') and ([type] = 'green')</Filter>
+    <PolygonSymbolizer fill="rgba(204, 204, 204, 0.5)" />
+    <LineSymbolizer stroke="rgba(242, 242, 242, 0.5)" stroke-width="1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <Filter>([class] = 'pitch') and ([type] = 'fairway')</Filter>
+    <LineSymbolizer stroke="rgba(204, 204, 204, 0.5)" stroke-width="1.5" />
+    <PolygonSymbolizer fill="rgba(242, 242, 242, 0.5)" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([class] = 'pitch') and ([type] = 'fairway')</Filter>
+    <LineSymbolizer stroke="rgba(204, 204, 204, 0.5)" stroke-width="1" />
+    <PolygonSymbolizer fill="rgba(242, 242, 242, 0.5)" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'pitch') and ([type] = 'fairway')</Filter>
+    <LineSymbolizer stroke="rgba(204, 204, 204, 0.5)" stroke-width="0.5" />
+    <PolygonSymbolizer fill="rgba(242, 242, 242, 0.5)" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <Filter>([class] = 'pitch') and ([type] = 'tee')</Filter>
+    <LineSymbolizer stroke="rgba(204, 204, 204, 0.5)" stroke-width="1.5" />
+    <PolygonSymbolizer fill="rgba(242, 242, 242, 0.5)" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([class] = 'pitch') and ([type] = 'tee')</Filter>
+    <LineSymbolizer stroke="rgba(204, 204, 204, 0.5)" stroke-width="1" />
+    <PolygonSymbolizer fill="rgba(242, 242, 242, 0.5)" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'pitch') and ([type] = 'tee')</Filter>
+    <LineSymbolizer stroke="rgba(204, 204, 204, 0.5)" stroke-width="0.5" />
+    <PolygonSymbolizer fill="rgba(242, 242, 242, 0.5)" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <Filter>([class] = 'pitch')</Filter>
+    <PolygonSymbolizer fill="rgba(255, 255, 255, 0.5)" />
+    <LineSymbolizer stroke-width="1.5" stroke="#ffffff" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([class] = 'pitch')</Filter>
+    <PolygonSymbolizer fill="rgba(255, 255, 255, 0.5)" />
+    <LineSymbolizer stroke-width="1" stroke="#ffffff" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'pitch')</Filter>
+    <PolygonSymbolizer fill="rgba(255, 255, 255, 0.5)" />
+    <LineSymbolizer stroke="#ffffff" stroke-width="0.5" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'sand') and ([type] = 'bunker')</Filter>
+    <PolygonSymbolizer fill="#ffffda" />
+    <LineSymbolizer stroke="#ffffac" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'school')</Filter>
+    <PolygonSymbolizer fill="#fbf6ff" />
+    <LineSymbolizer stroke="#eeeaf2" offset="-0.5" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'sand')</Filter>
+    <PolygonSymbolizer fill="#fffff4" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'park')</Filter>
+    <PolygonSymbolizer fill="#edf9e4" />
+    <LineSymbolizer stroke="#e1edd9" offset="-0.5" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'industrial')</Filter>
+    <PolygonSymbolizer fill="#f6faff" />
+    <LineSymbolizer stroke="#eaeef2" offset="-0.5" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'hospital')</Filter>
+    <PolygonSymbolizer fill="#fff0f0" />
+    <LineSymbolizer stroke="#f2e4e4" offset="-0.5" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'cemetery')</Filter>
+    <PolygonSymbolizer fill="#edf4ed" />
+    <LineSymbolizer stroke="#e1e8e1" offset="-0.5" />
+  </Rule>
+</Style>
+<Style name="landuse-cover" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <Filter>([class] = 'rock') and ([type] = 'golf_course')</Filter>
+    <PolygonSymbolizer fill="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <Filter>([class] = 'rock') and ([type] = 'rough')</Filter>
+    <PolygonSymbolizer fill="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <Filter>([class] = 'rock')</Filter>
+    <PolygonSymbolizer fill="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <Filter>([type] = 'golf_course')</Filter>
+    <PolygonSymbolizer fill="#d1f0ba" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <Filter>([type] = 'rough')</Filter>
+    <PolygonSymbolizer fill="#d1f0ba" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <Filter>([class] = 'sand')</Filter>
+    <PolygonSymbolizer fill="#fffff4" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <Filter>([class] = 'crop')</Filter>
+    <PolygonSymbolizer fill="#eeeed4" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <Filter>([class] = 'grass')</Filter>
+    <PolygonSymbolizer fill="#e7ebd1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <Filter>([class] = 'scrub')</Filter>
+    <PolygonSymbolizer fill="#e0e8cd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <Filter>([class] = 'wood')</Filter>
+    <PolygonSymbolizer fill="#d4e2c6" />
+  </Rule>
+</Style>
+<Style name="landuse-cover66" filter-mode="first" opacity="0.66">
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([class] = 'rock') and ([type] = 'rough')</Filter>
+    <PolygonSymbolizer fill="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = 'rock') and ([type] = 'rough')</Filter>
+    <PolygonSymbolizer fill="#d1f0ba" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([class] = 'rock') and ([type] = 'golf_course')</Filter>
+    <PolygonSymbolizer fill="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = 'rock') and ([type] = 'golf_course')</Filter>
+    <PolygonSymbolizer fill="#d1f0ba" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([class] = 'rock')</Filter>
+    <PolygonSymbolizer fill="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([type] = 'rough')</Filter>
+    <PolygonSymbolizer fill="#d1f0ba" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([type] = 'golf_course')</Filter>
+    <PolygonSymbolizer fill="#d1f0ba" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = 'sand')</Filter>
+    <PolygonSymbolizer fill="#fffff4" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = 'crop')</Filter>
+    <PolygonSymbolizer fill="#eeeed4" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = 'grass')</Filter>
+    <PolygonSymbolizer fill="#e7ebd1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = 'scrub')</Filter>
+    <PolygonSymbolizer fill="#e0e8cd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = 'wood')</Filter>
+    <PolygonSymbolizer fill="#d4e2c6" />
+  </Rule>
+</Style>
+<Style name="landuse-cover33" filter-mode="first" opacity="0.33">
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([class] = 'rock') and ([type] = 'rough')</Filter>
+    <PolygonSymbolizer fill="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([class] = 'rock') and ([type] = 'rough')</Filter>
+    <PolygonSymbolizer fill="#d1f0ba" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([class] = 'rock') and ([type] = 'golf_course')</Filter>
+    <PolygonSymbolizer fill="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([class] = 'rock') and ([type] = 'golf_course')</Filter>
+    <PolygonSymbolizer fill="#d1f0ba" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([class] = 'rock')</Filter>
+    <PolygonSymbolizer fill="#dddddd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([type] = 'rough')</Filter>
+    <PolygonSymbolizer fill="#d1f0ba" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([type] = 'golf_course')</Filter>
+    <PolygonSymbolizer fill="#d1f0ba" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([class] = 'sand')</Filter>
+    <PolygonSymbolizer fill="#fffff4" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([class] = 'crop')</Filter>
+    <PolygonSymbolizer fill="#eeeed4" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([class] = 'grass')</Filter>
+    <PolygonSymbolizer fill="#e7ebd1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([class] = 'scrub')</Filter>
+    <PolygonSymbolizer fill="#e0e8cd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([class] = 'wood')</Filter>
+    <PolygonSymbolizer fill="#d4e2c6" />
+  </Rule>
+</Style>
+<Layer name="landuse"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>landuse-cover33</StyleName>
+    <StyleName>landuse-cover66</StyleName>
+    <StyleName>landuse-cover</StyleName>
+    <StyleName>landuse-use</StyleName>  </Layer>
+
+<Layer name="waterway"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="water"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="aeroway"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="barrier_line"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Style name="building" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <PolygonSymbolizer geometry-transform="translate(-0.5,-1.2)" clip="false" fill="#cbcbc4" fill-opacity="0.25" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <PolygonSymbolizer clip="false" fill="#cbcbc4" fill-opacity="0.25" />
+  </Rule>
+</Style>
+<Style name="building-shadow" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <LineSymbolizer stroke-width="2" clip="false" stroke-linejoin="round" stroke-linecap="round" stroke="rgba(0, 0, 0, 0.15000000000000002)" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <LineSymbolizer clip="false" stroke-linejoin="round" stroke-linecap="round" stroke="rgba(0, 0, 0, 0.15000000000000002)" />
+  </Rule>
+</Style>
+<Layer name="building"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>building-shadow</StyleName>
+    <StyleName>building</StyleName>  </Layer>
+
+<Style name="landuse_overlay" filter-mode="first">
+  <Rule>
+    <Filter>([class] = 'wetland_noveg')</Filter>
+    <PolygonSymbolizer fill="rgba(255, 255, 255, 0.19999999999999996)" clip="false" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'wetland')</Filter>
+    <PolygonSymbolizer fill="rgba(255, 255, 255, 0.19999999999999996)" clip="false" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'pier')</Filter>
+    <PolygonSymbolizer fill="#ffffff" clip="false" />
+  </Rule>
+  <Rule>
+    <Filter>([class] = 'breakwater')</Filter>
+    <PolygonSymbolizer fill="#ffffff" clip="false" />
+  </Rule>
+  <Rule>
+    <PolygonSymbolizer fill="rgba(0, 0, 0, 0)" clip="false" />
+  </Rule>
+</Style>
+<Layer name="landuse_overlay"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>landuse_overlay</StyleName>  </Layer>
+
+<Style name="tunnel" filter-mode="first" opacity="0.5">
+</Style>
+<Layer name="tunnel"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>tunnel</StyleName>  </Layer>
+
+<Layer name="road"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="bridge"
+  group-by="layer"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="admin"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="country_label_line"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="country_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="marine_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="state_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="place_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="water_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="poi_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="road_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="waterway_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="housenum_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="TOWNS"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Style name="OGRGeoJSON" filter-mode="first">
+  <Rule>
+    <LineSymbolizer stroke="#000000" stroke-width="0.15" />
+    <PolygonSymbolizer fill="#bbbbbb" fill-opacity="0.1" />
+  </Rule>
+</Style>
+<Layer name="OGRGeoJSON"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>OGRGeoJSON</StyleName>  </Layer>
+
+<Layer name="bestDayForDistrict2"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Style name="BRA" filter-mode="first">
+  <Rule>
+    <LineSymbolizer stroke="#ea212d" stroke-dasharray="1, 5" stroke-linecap="round" stroke-width="2" />
+  </Rule>
+</Style>
+<Layer name="BRA"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>BRA</StyleName>  </Layer>
+
+<Style name="CSCNC" filter-mode="first">
+  <Rule>
+    <LineSymbolizer stroke="#000000" stroke-dasharray="4, 4" />
+  </Rule>
+</Style>
+<Layer name="CSCNC"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>CSCNC</StyleName>  </Layer>
+
+</Map>

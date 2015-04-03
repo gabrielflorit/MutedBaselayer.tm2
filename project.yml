@@ -1,0 +1,28 @@
+_prefs: 
+  saveCenter: true
+_properties: 
+  bridge: 
+    "group-by": layer
+attribution: "<a href='https://www.mapbox.com/about/maps/' target='_blank'>&copy; Mapbox &copy; OpenStreetMap</a> <a class='mapbox-improve-map' href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a>"
+bounds: 
+  - -180
+  - -85.0511
+  - 180
+  - 85.0511
+center: 
+  - -71.0696
+  - 42.3486
+  - 15
+description: ''
+format: "png8:m=h"
+interactivity_layer: ''
+layers: null
+maxzoom: 22
+minzoom: 0
+name: MutedBaselayer
+source: "mapbox:///gabriel-florit.19720588,mapbox.mapbox-streets-v5,gabriel-florit.284f070c,gabriel-florit.d5687028,gabriel-florit.c09cf669,gabriel-florit.84745274"
+styles: 
+  - style.mss
+  - road.mss
+  - labels.mss
+template: ''
